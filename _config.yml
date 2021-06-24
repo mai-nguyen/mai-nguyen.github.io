@@ -1,3 +1,4 @@
+name: Mai Nguyen
 plugins:
   - jekyll-relative-links
 relative_links:
