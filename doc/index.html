@@ -301,28 +301,157 @@ pre code {
     nights_per_year = count...,
     st_nightly = sample_nightly_rent_price,
     lt_monthly = current_monthly_rent)
-head(ws_data)</code></pre>
-<pre><code>##   ws_property_id location property_type lt_monthly p10 p90 st_nightly
-## 1             W1    L9531            R6       1060 114 153        148
-## 2            W10    L9533            R6       1200 111 149        133
-## 3           W100    L1944            R2       3300 108 610        372
-## 4           W101   L15257            R2       1400 178 533        302
-## 5           W102   L15257            R6       2000 221 617        429
-## 6           W103   L15257           R10       1600 202 646        380
-##   nights_per_year occ_rate          city state zipcode apt_house num_bedrooms
-## 1              59     0.16   Chapel Hill    NC   27514 apartment            2
-## 2             127     0.35   Chapel Hill    NC   27517 apartment            2
-## 3             145     0.40 San Francisco    CA   94129 apartment            1
-## 4             133     0.36        Austin    TX   78702 apartment            1
-## 5             150     0.41        Austin    TX   78702 apartment            2
-## 6             150     0.41        Austin    TX   78702     house            1
-##   kitchen shared
-## 1       Y      N
-## 2       Y      N
-## 3       Y      N
-## 4       Y      N
-## 5       Y      N
-## 6       Y      N</code></pre>
+kable(head(ws_data))</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="9%" />
+<col width="5%" />
+<col width="8%" />
+<col width="6%" />
+<col width="2%" />
+<col width="2%" />
+<col width="6%" />
+<col width="10%" />
+<col width="5%" />
+<col width="8%" />
+<col width="3%" />
+<col width="5%" />
+<col width="6%" />
+<col width="8%" />
+<col width="5%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">ws_property_id</th>
+<th align="left">location</th>
+<th align="left">property_type</th>
+<th align="right">lt_monthly</th>
+<th align="right">p10</th>
+<th align="right">p90</th>
+<th align="right">st_nightly</th>
+<th align="right">nights_per_year</th>
+<th align="right">occ_rate</th>
+<th align="left">city</th>
+<th align="left">state</th>
+<th align="right">zipcode</th>
+<th align="left">apt_house</th>
+<th align="right">num_bedrooms</th>
+<th align="left">kitchen</th>
+<th align="left">shared</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">W1</td>
+<td align="left">L9531</td>
+<td align="left">R6</td>
+<td align="right">1060</td>
+<td align="right">114</td>
+<td align="right">153</td>
+<td align="right">148</td>
+<td align="right">59</td>
+<td align="right">0.16</td>
+<td align="left">Chapel Hill</td>
+<td align="left">NC</td>
+<td align="right">27514</td>
+<td align="left">apartment</td>
+<td align="right">2</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+<tr class="even">
+<td align="left">W10</td>
+<td align="left">L9533</td>
+<td align="left">R6</td>
+<td align="right">1200</td>
+<td align="right">111</td>
+<td align="right">149</td>
+<td align="right">133</td>
+<td align="right">127</td>
+<td align="right">0.35</td>
+<td align="left">Chapel Hill</td>
+<td align="left">NC</td>
+<td align="right">27517</td>
+<td align="left">apartment</td>
+<td align="right">2</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+<tr class="odd">
+<td align="left">W100</td>
+<td align="left">L1944</td>
+<td align="left">R2</td>
+<td align="right">3300</td>
+<td align="right">108</td>
+<td align="right">610</td>
+<td align="right">372</td>
+<td align="right">145</td>
+<td align="right">0.40</td>
+<td align="left">San Francisco</td>
+<td align="left">CA</td>
+<td align="right">94129</td>
+<td align="left">apartment</td>
+<td align="right">1</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+<tr class="even">
+<td align="left">W101</td>
+<td align="left">L15257</td>
+<td align="left">R2</td>
+<td align="right">1400</td>
+<td align="right">178</td>
+<td align="right">533</td>
+<td align="right">302</td>
+<td align="right">133</td>
+<td align="right">0.36</td>
+<td align="left">Austin</td>
+<td align="left">TX</td>
+<td align="right">78702</td>
+<td align="left">apartment</td>
+<td align="right">1</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+<tr class="odd">
+<td align="left">W102</td>
+<td align="left">L15257</td>
+<td align="left">R6</td>
+<td align="right">2000</td>
+<td align="right">221</td>
+<td align="right">617</td>
+<td align="right">429</td>
+<td align="right">150</td>
+<td align="right">0.41</td>
+<td align="left">Austin</td>
+<td align="left">TX</td>
+<td align="right">78702</td>
+<td align="left">apartment</td>
+<td align="right">2</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+<tr class="even">
+<td align="left">W103</td>
+<td align="left">L15257</td>
+<td align="left">R10</td>
+<td align="right">1600</td>
+<td align="right">202</td>
+<td align="right">646</td>
+<td align="right">380</td>
+<td align="right">150</td>
+<td align="right">0.41</td>
+<td align="left">Austin</td>
+<td align="left">TX</td>
+<td align="right">78702</td>
+<td align="left">house</td>
+<td align="right">1</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="modeling" class="section level1" number="2">
